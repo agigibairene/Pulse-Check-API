@@ -1,3 +1,17 @@
 from django.db import models
 
-# Create your models here.
+class MonitorModel(models.Model):
+    
+    class STATUS(models.TextChoices):
+        Active = 'active', 'Active'
+        Paused = 'paused', 'Paused'
+        Down = 'down', 'Down'
+        
+    device_id = models.CharField(max_length=150, unique=True)
+    timeout = models.IntegerField()
+    alert_email = models.EmailField()
+    status = models.CharField(choices=STATUS.choices, default=STATUS.Active)
+    last_beat = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now=True)
+    
+    
