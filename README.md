@@ -20,7 +20,7 @@ The API allows clients to:
 
 
 ## Flow chart
-View (chart)[https://drive.google.com/file/d/15laONMSK57fUXAQQmCuYa9ysqvHR-pbw/view?usp=sharing]
+View [Flow chart](https://drive.google.com/file/d/15laONMSK57fUXAQQmCuYa9ysqvHR-pbw/view?usp=sharing)
 or check for  `Pulse check api.drawio.png` file 
 
 ## Installation
