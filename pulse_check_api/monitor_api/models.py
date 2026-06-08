@@ -7,11 +7,12 @@ class MonitorModel(models.Model):
         Paused = 'paused', 'Paused'
         Down = 'down', 'Down'
         
-    device_id = models.CharField(max_length=150, unique=True)
+    id = models.CharField(max_length=150, primary_key=True)
     timeout = models.IntegerField()
     alert_email = models.EmailField()
+    alert_sent = models.BooleanField(default=False)
     status = models.CharField(choices=STATUS.choices, default=STATUS.Active)
     last_beat = models.DateTimeField(auto_now_add=True)
     created_at = models.DateTimeField(auto_now=True)
-    
+    updated_at = models.DateTimeField(auto_now_add=True)
     

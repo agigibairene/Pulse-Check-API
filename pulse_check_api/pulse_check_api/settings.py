@@ -135,3 +135,4 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': ' monitorremote solar farms and unmanned weather stations in areas with poor connectivity',
     'VERSION': '1.0.0',
 }
+
