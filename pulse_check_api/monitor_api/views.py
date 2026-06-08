@@ -42,7 +42,7 @@ class PulseView(generics.GenericAPIView):
 
 class PauseMonitorView(generics.GenericAPIView):
     """ Allows user to pause the beat/monitor"""
-    def post(self, request, id):
+    def patch(self, request, id):
         monitor = get_object_or_404(MonitorModel, id=id)
         
         monitor.status = MonitorModel.STATUS.Paused

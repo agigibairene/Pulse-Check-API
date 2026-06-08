@@ -97,9 +97,9 @@ POST /monitors/
 
 ```json
 {
-  "name": "Weather Station A",
-  "expected_interval_minutes": 60,
-  "owner_email": "admin@example.com"
+  "id": "device-1",
+  "timeout": 60,
+  "alert_email": "test@gmail.com"
 }
 ```
 
@@ -131,11 +131,12 @@ GET /monitors/
 ```json
 [
   {
-    "id": "device-1",
-    "name": "Weather Station A",
-    "last_beat": "2026-06-08T18:45:00Z",
-    "status": "Healthy"
-  },
+    "id": "device-123",
+    "timeout": 60,
+    "alert_email": "test@gmail.com",
+    "status": "Healthy",
+    "last_beat": "2026-06-08T20:37:58.058631Z"
+  }
 ]
 ```
 
