@@ -19,6 +19,10 @@ The API allows clients to:
 | Package management| uv                                  |  
 
 
+## Flow chart
+View (chart)[https://drive.google.com/file/d/15laONMSK57fUXAQQmCuYa9ysqvHR-pbw/view?usp=sharing]
+or check for  `Pulse check api.drawio.png` file 
+
 ## Installation
 
 ### 1. Clone the Repository
