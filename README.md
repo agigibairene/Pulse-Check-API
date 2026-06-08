@@ -259,3 +259,21 @@ Open the interactive API documentation:
 ```text
 http://127.0.0.1:8000/schema/swagger-ui/
 ```
+
+## Monitor Alert system
+When a monitor runs down, the system must internally fire an alert.
+
+### Run the checker
+
+```bash
+python manage.py check_monitor
+```
+
+### With a failed device:
+```json
+{
+  "ALERT": "Device device-123 is down!",
+  "time": "2026-06-08T10:15:30"
+}
+```
+
