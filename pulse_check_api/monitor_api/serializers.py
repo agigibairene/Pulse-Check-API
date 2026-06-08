@@ -5,4 +5,4 @@ class MonitorSerializer(serializers.ModelSerializer):
     """ Serializers device data from model query to JSON format and vice versa"""
     class Meta:
         model = MonitorModel
-        fields = ['id', 'timeout', 'alert_email']
+        fields = ['id', 'timeout', 'alert_email', 'status', 'last_beat']

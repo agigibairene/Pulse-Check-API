@@ -17,7 +17,7 @@ class CreateMonitorView(generics.ListCreateAPIView):
         monitor = serializer.save()
 
         return Response(
-            {'message': f"Monitor {monitor.id} successfully created "},
+            {'message': f"Monitor {monitor.id} successfully created"},
             status=status.HTTP_201_CREATED
         )
         
@@ -30,14 +30,12 @@ class PulseView(generics.GenericAPIView):
         monitor = get_object_or_404(MonitorModel, id=id)
         
         monitor.last_beat = timezone.now()
-        monitor.status = MonitorModel.STATUS.Active
+        monitor.status = MonitorModel.STATUS.Healthy
         monitor.alert_sent = False
         monitor.save()
         
         return Response(
-            {
-                "message": "Heartbeat received"
-            }
+            {"message": "Heartbeat received"}
         )
         
 

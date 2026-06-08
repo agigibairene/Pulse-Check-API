@@ -3,7 +3,7 @@ from django.db import models
 class MonitorModel(models.Model):
     
     class STATUS(models.TextChoices):
-        Active = 'active', 'Active'
+        Healthy = 'active', 'Active'
         Paused = 'paused', 'Paused'
         Down = 'down', 'Down'
         
@@ -11,7 +11,7 @@ class MonitorModel(models.Model):
     timeout = models.IntegerField()
     alert_email = models.EmailField()
     alert_sent = models.BooleanField(default=False)
-    status = models.CharField(choices=STATUS.choices, default=STATUS.Active)
+    status = models.CharField(choices=STATUS.choices, default=STATUS.Healthy)
     last_beat = models.DateTimeField(auto_now_add=True)
     created_at = models.DateTimeField(auto_now=True)
     updated_at = models.DateTimeField(auto_now_add=True)
